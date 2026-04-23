@@ -761,11 +761,6 @@
 
     .btn-ml:hover { opacity: 0.88; transform: translateY(-2px); }
 
-    @media (max-width: 768px) {
-      .ml-card { grid-template-columns: 1fr; }
-      .ml-card-img { border-right: none; border-bottom: 1px solid rgba(255,230,0,0.1); }
-    }
-
     /* ── CTA ── */
     .cta-section { padding: 8rem 5%; text-align: center; position: relative; overflow: hidden; }
     .cta-bg { position: absolute; inset: 0; background: radial-gradient(ellipse 60% 80% at 50% 50%, rgba(0,79,152,0.2) 0%, transparent 70%); }
@@ -787,13 +782,37 @@
     .reveal { opacity: 0; transform: translateY(32px); transition: opacity 0.7s ease, transform 0.7s ease; }
     .reveal.visible { opacity: 1; transform: translateY(0); }
 
-    /* ── RESPONSIVE ── */
+    /* ── RESPONSIVE MOBILE ── */
     @media (max-width: 768px) {
+      /* Nav */
       nav ul { display: none; }
+
+      /* Stats */
       .stats { grid-template-columns: 1fr; }
       .stat { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.07); }
+
+      /* Dolor cards: una debajo de la otra */
+      .dolor-grid { grid-template-columns: 1fr; }
+      .dolor-card { min-height: 380px; }
+
+      /* Hero */
+      .hero { padding: 6rem 5% 3rem; }
+      .hero h1 { font-size: clamp(2.4rem, 10vw, 3.5rem); }
+
+      /* Bonos */
+      .bonos-grid { grid-template-columns: 1fr; }
+
+      /* Features */
+      .features-grid { grid-template-columns: 1fr; }
+
+      /* Product */
       .product-inner { grid-template-columns: 1fr; gap: 3rem; }
+
+      /* Footer */
       footer { flex-direction: column; text-align: center; }
+
+      /* Dolor header */
+      .dolor-header h2 { font-size: clamp(1.7rem, 6vw, 2.2rem); }
     }
 
     /* ── WHATSAPP FAB ── */
